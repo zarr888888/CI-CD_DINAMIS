@@ -21,8 +21,11 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          cd /var/www/cicd_dinamis
-          git pull origin main
-          composer install --no-dev
-          php artisan migrate --force
-          php artisan optimize
+            cd /var/www/cicd_dinamis
+            php artisan down
+            git pull origin main
+            composer install --no-interaction --prefer-dist --optimize-autoloader
+            php artisan test
+            php artisan optimize:clear
+            php artisan optimize
+            php artisan up
