@@ -15,3 +15,11 @@
 require __DIR__ . '/front.php';
 require __DIR__ . '/admin.php';
 require __DIR__ . '/auth.php';
+
+Route::get('/testing-cicd', function () {
+    return '<div style="background-color: yellow; padding: 50px; text-align: center;">
+                <h1 style="color: red; font-size: 40px; font-weight: bold;">
+                     DEPLOY OTOMATIS CI/CD ALFAJAR SUKSES 100% BOLO!
+                </h1>
+            </div>';
+});
