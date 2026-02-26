@@ -10,13 +10,7 @@ use App\Http\Controllers\Front\PageController as FrontPageController;
 use App\Http\Controllers\Front\TagController as FrontTagController;
 
 // FrontEnd Routes [Public routes]
-Route::get('/', function () {
-    return '<div style="background-color: blue; padding: 50px; text-align: center;">
-                <h1 style="color: red; font-size: 40px; font-weight: bold;">
-                    HALAMAN UTAMA CI/CD ALFAJAR SUKSES BOLO! V2
-                </h1>
-            </div>';
-});
+Route::get('/', HomeController::class)->name('webhome');
 Route::get('/post/{slug}', [FrontPostController::class, 'getPostBySlug'])->name('post.show');
 Route::get('/category/{slug}', [FrontCategoryController::class, 'getCategoryBySlug'])->name('category.show');
 Route::get('/page/{slug}', [FrontPageController::class, 'getPageBySlug'])->name('page.show');
