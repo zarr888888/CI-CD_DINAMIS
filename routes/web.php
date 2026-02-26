@@ -2,7 +2,7 @@
 Route::get('/testing-cicd', function () {
     return '<div style="background-color: blue; padding: 50px; text-align: center;">
                 <h1 style="color: red; font-size: 40px; font-weight: bold;">
-                     DEPLOY OTOMATIS CI/CD ALFAJAR SUKSES Rekkk!
+                    SULTAN ALFAJAR!
                 </h1>
             </div>';
 });
